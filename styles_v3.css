@@ -1075,7 +1075,228 @@ body {
     margin-bottom: 60px;
 }
 
-/* 검증 박스 */
+/* 통합 검증 박스 (새 디자인) */
+.verification-box-unified {
+    background: white;
+    border-radius: 25px;
+    padding: 60px 50px;
+    margin: 50px 0;
+    box-shadow: var(--shadow-lg);
+    border: 3px solid var(--medium-green);
+}
+
+.verification-main-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.check-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--deep-green);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.check-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.verification-main-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--deep-green);
+    line-height: 1.5;
+}
+
+.verification-main-desc {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 2;
+    color: var(--text-dark);
+    margin: 30px 0 50px;
+}
+
+/* 안전 결과 그리드 */
+.safety-results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.safety-result-card {
+    background: linear-gradient(135deg, var(--light-green) 0%, white 100%);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    border: 2px solid var(--medium-green);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+}
+
+.safety-result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.result-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--medium-green);
+    color: white;
+    font-size: 2.5rem;
+    line-height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    font-weight: bold;
+}
+
+.result-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--deep-green);
+    margin-bottom: 8px;
+}
+
+.result-subtitle {
+    font-size: 1rem;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+}
+
+.result-status-safe {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--medium-green);
+    background: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 2px solid var(--medium-green);
+}
+
+/* 안전 각주 */
+.safety-footnote {
+    display: flex;
+    gap: 20px;
+    background: var(--light-gray);
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 50px;
+    border-left: 5px solid var(--warm-gold);
+}
+
+.footnote-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.footnote-content {
+    flex: 1;
+}
+
+.footnote-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-gray);
+    margin-bottom: 10px;
+}
+
+.footnote-text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-gray);
+}
+
+/* 인증 및 결론 섹션 */
+.certification-conclusion {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.cert-badges-row {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.cert-badge-item {
+    text-align: center;
+}
+
+.cert-badge-circle {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--medium-green) 0%, var(--deep-green) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 8px 20px rgba(45, 90, 61, 0.3);
+}
+
+.cert-badge-icon {
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+}
+
+.cert-badge-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--deep-green);
+    margin-bottom: 5px;
+}
+
+.cert-badge-sub {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+}
+
+.conclusion-message-box {
+    background: linear-gradient(135deg, var(--light-gray) 0%, white 100%);
+    border-radius: 25px;
+    padding: 50px;
+    border: 3px solid var(--warm-gold);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.conclusion-quote {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--deep-green);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.conclusion-detail {
+    font-size: 1.15rem;
+    line-height: 2;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+}
+
+.conclusion-final {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--deep-green);
+    padding-top: 25px;
+    border-top: 2px solid var(--medium-gray);
+}
+
+/* 기존 검증 박스 (백업) */
 .verification-box {
     background: white;
     border-radius: 20px;
@@ -1263,6 +1484,14 @@ body {
         padding: 30px 20px;
     }
     
+    .verification-box-unified {
+        padding: 40px 25px;
+    }
+    
+    .verification-main-title {
+        font-size: 1.5rem;
+    }
+    
     .verification-header {
         flex-direction: column;
         align-items: flex-start;
@@ -1271,6 +1500,40 @@ body {
     .verification-data,
     .verification-result {
         grid-template-columns: 1fr;
+    }
+    
+    .safety-results-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cert-badges-row {
+        gap: 40px;
+    }
+    
+    .cert-badge-circle {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .cert-badge-icon {
+        font-size: 2.5rem;
+    }
+    
+    .conclusion-message-box {
+        padding: 35px 25px;
+    }
+    
+    .conclusion-quote {
+        font-size: 1.4rem;
+    }
+    
+    .conclusion-final {
+        font-size: 1.1rem;
+    }
+    
+    .safety-footnote {
+        flex-direction: column;
+        gap: 15px;
     }
     
     .cert-logo-large {

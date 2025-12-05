@@ -16,6 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 성분 아이템 호버 효과
     initIngredientHover();
+    
+    // 온도 게이지 애니메이션
+    initTemperatureGauge();
+    
+    // SVG 애니메이션 트리거
+    initSVGAnimation();
 });
 
 // 스크롤 애니메이션 초기화
@@ -527,6 +533,62 @@ function initTouchOptimization() {
 // 터치 최적화 초기화
 initTouchOptimization();
 
+// 온도 게이지 애니메이션
+function initTemperatureGauge() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const gaugeFill = entry.target.querySelector('.gauge-fill');
+                if (gaugeFill) {
+                    const targetWidth = gaugeFill.getAttribute('data-target') || 100;
+                    
+                    // 0.5초 지연 후 애니메이션 시작
+                    setTimeout(() => {
+                        gaugeFill.style.width = targetWidth + '%';
+                    }, 500);
+                }
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+    
+    const gauge = document.querySelector('.temperature-gauge');
+    if (gauge) {
+        observer.observe(gauge);
+    }
+}
+
+// SVG 애니메이션 트리거
+function initSVGAnimation() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const svg = entry.target.querySelector('.warmth-svg');
+                if (svg) {
+                    // SVG 애니메이션 시작
+                    const animations = svg.querySelectorAll('animate');
+                    animations.forEach(anim => {
+                        anim.beginElement();
+                    });
+                    
+                    // 반복 재생을 위해 6초마다 리셋
+                    setInterval(() => {
+                        animations.forEach(anim => {
+                            anim.beginElement();
+                        });
+                    }, 8000);
+                }
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+    
+    const visualSection = document.querySelector('.body-warmth-visual');
+    if (visualSection) {
+        observer.observe(visualSection);
+    }
+}
+
 // 페이지 로드 완료 시 실행
 window.addEventListener('load', function() {
     // 로딩 완료 후 부드럽게 나타나기
@@ -539,6 +601,7 @@ window.addEventListener('load', function() {
     
     console.log('🔥 온애정 추어탕 상세페이지 로드 완료');
     console.log('📚 총 12편의 논문 인용 (총 인용 횟수: 9,068회)');
+    console.log('🎨 인체 온기 시각화 애니메이션 추가');
 });
 
 // 성능 모니터링 (개발용)

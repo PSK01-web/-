@@ -1797,3 +1797,273 @@ a {
     opacity: 1;
     transform: translateX(0);
 }
+
+/* ================================================================
+   CLEAN & CHIC REDESIGN - Aesop/Honest Style
+   ================================================================ */
+
+/* ----------------------------------------------------------------
+   SECTION 4. TECHNOLOGY - Clean & Chic
+   ---------------------------------------------------------------- */
+.technology-section-clean {
+    background: #FFFFFF;
+    padding: 120px 0;
+}
+
+.technology-container-clean {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.technology-hero-image {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    overflow: hidden;
+    border-radius: 0; /* 각진 모서리 */
+}
+
+.technology-image-placeholder-clean {
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(135deg, #EBE3D5, #F4E0C8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid #E8E4DE;
+}
+
+.powder-dissolving-effect {
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(217,119,66,0.2), transparent);
+    border-radius: 50%;
+    position: absolute;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.tech-image-desc-clean {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+.technology-message-clean {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.technology-title-clean {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2C2520;
+    margin-bottom: 20px;
+}
+
+.technology-subtitle-clean {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+.technology-subtitle-clean strong {
+    color: #D97742;
+    font-weight: 700;
+}
+
+.technology-specs-clean {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.spec-item-clean {
+    text-align: center;
+    padding: 40px;
+    background: #FFF8F0;
+    border: 1px solid #E8E4DE;
+    border-radius: 0; /* 각진 모서리 */
+    transition: all 0.3s ease;
+}
+
+.spec-item-clean:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.spec-item-clean h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #D97742;
+    margin-bottom: 10px;
+}
+
+.spec-item-clean p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* ----------------------------------------------------------------
+   SECTION 5. TRANSPARENCY - 영수증 컨셉
+   ---------------------------------------------------------------- */
+.trust-section-clean {
+    background: #FFFFFF; /* Pure White */
+    padding: 120px 0;
+}
+
+.trust-container-clean {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.trust-title-clean {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #000000;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 60px;
+}
+
+.receipt-box-clean {
+    max-width: 600px;
+    margin: 0 auto 80px;
+    padding: 40px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 0; /* 각진 모서리 */
+    font-family: 'Courier New', monospace; /* 영수증 폰트 */
+}
+
+.receipt-header-clean,
+.receipt-footer-clean {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.receipt-header-clean p,
+.receipt-footer-clean p {
+    font-size: 0.9rem;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.receipt-items-clean {
+    margin: 30px 0;
+}
+
+.receipt-line-clean {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dotted #CCCCCC;
+    font-size: 0.95rem;
+    color: #000000;
+}
+
+.receipt-line-clean.total-line {
+    border-bottom: 2px solid #000000;
+    font-weight: 700;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.item-check {
+    color: #2E7D32;
+    font-weight: 700;
+}
+
+.certificate-grid-clean {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto 60px;
+}
+
+.cert-item-clean {
+    text-align: center;
+    padding: 40px 20px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 0; /* 각진 모서리 */
+    transition: all 0.3s ease;
+}
+
+.cert-item-clean:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.cert-item-clean h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.cert-result-clean {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2E7D32;
+}
+
+.trust-footnote-clean {
+    text-align: center;
+    padding: 20px;
+    background: #F5F5F5;
+    border-left: 3px solid #D97742;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.trust-footnote-clean p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ----------------------------------------------------------------
+   RESPONSIVE - Clean & Chic
+   ---------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .technology-specs-clean {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .certificate-grid-clean {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .technology-title-clean {
+        font-size: 2rem;
+    }
+    
+    .technology-subtitle-clean {
+        font-size: 1.1rem;
+    }
+    
+    .receipt-box-clean {
+        padding: 30px 20px;
+    }
+    
+    .trust-title-clean {
+        font-size: 1.5rem;
+    }
+}

@@ -901,6 +901,167 @@ a {
 }
 
 /* ----------------------------------------------------------------
+   6.5. SECTION 4.5: RECOMMENDATION - 추천 대상 (Checklist)
+   ---------------------------------------------------------------- */
+.recommendation-section {
+    background: #EBE3D5; /* Warm Sand */
+    padding: var(--section-padding);
+}
+
+.recommendation-container {
+    max-width: var(--container-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.recommendation-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.recommendation-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--dark-charcoal);
+}
+
+.recommendation-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.recommendation-subtitle strong {
+    color: var(--burnt-orange);
+    font-weight: 700;
+}
+
+.recommendation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.recommendation-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.recommendation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(217,119,66,0.2);
+    border-color: var(--burnt-orange);
+}
+
+.card-illustration {
+    margin-bottom: 30px;
+}
+
+.illustration-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(135deg, #FFF8F0 0%, #FFF 100%);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border: 2px solid var(--warm-greige);
+}
+
+.line-art {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.illustration-desc {
+    font-size: 0.85rem;
+    color: #999;
+    font-style: italic;
+    text-align: center;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-badge {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 6px 16px;
+    background: var(--burnt-orange);
+    color: white;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--dark-charcoal);
+    margin-bottom: 5px;
+}
+
+.card-situation {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card-connection {
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #FFF8F0 0%, #FFEFD5 100%);
+    border-radius: 10px;
+    border-left: 3px solid var(--burnt-orange);
+}
+
+.connection-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--burnt-orange);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.connection-text {
+    font-size: 0.95rem;
+    color: var(--deep-brown);
+    font-weight: 500;
+}
+
+.recommendation-footer {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.footer-message {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--deep-brown);
+}
+
+.footer-message strong {
+    color: var(--burnt-orange);
+    font-weight: 700;
+}
+
+/* ----------------------------------------------------------------
    7. SECTION 5: TRANSPARENCY - 해 질 녘의 서재
    ---------------------------------------------------------------- */
 .transparency-section {
@@ -1514,8 +1675,13 @@ a {
     
     .technology-content,
     .safety-results,
-    .certification-badges {
+    .certification-badges,
+    .recommendation-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .recommendation-title {
+        font-size: 2rem;
     }
 }
 
@@ -1581,6 +1747,18 @@ a {
     
     .outro-title {
         font-size: 2rem;
+    }
+    
+    .recommendation-card {
+        padding: 25px;
+    }
+    
+    .card-title {
+        font-size: 1.3rem;
+    }
+    
+    .recommendation-title {
+        font-size: 1.8rem;
     }
 }
 

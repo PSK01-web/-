@@ -1803,6 +1803,176 @@ a {
    ================================================================ */
 
 /* ----------------------------------------------------------------
+   SECTION 3. SOLUTION - Clean & Chic (온기 3단계)
+   ---------------------------------------------------------------- */
+.solution-section-clean {
+    background: #FFF;
+    padding: 120px 0;
+}
+
+.solution-container-clean {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.solution-header-clean {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.solution-title-clean {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2C2520;
+    margin-bottom: 15px;
+    font-family: var(--font-serif);
+}
+
+.solution-subtitle-clean {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 400;
+}
+
+/* 3단 카드 그리드 */
+.steps-clean-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.step-clean-card {
+    text-align: center;
+    padding: 60px 40px;
+    background: white;
+    border-radius: 0; /* 각진 모서리 */
+    border: 1px solid #E8E4DE;
+    transition: all 0.3s ease;
+}
+
+.step-clean-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+.step-icon-clean {
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+
+.step-number-clean {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #999;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.step-title-en {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2C2520;
+    margin-bottom: 8px;
+    font-family: var(--font-serif);
+}
+
+.step-title-kr {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.step-keyword {
+    margin: 40px 0;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #FFF8F0, #FFF);
+    border-left: 3px solid #D97742;
+}
+
+.keyword-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #D97742;
+    margin-bottom: 5px;
+}
+
+.keyword-subtitle {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.step-oneline {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 30px;
+}
+
+/* 시너지 원료 15종 */
+.synergy-ingredients {
+    max-width: 800px;
+    margin: 80px auto 0;
+    padding: 50px 40px;
+    background: #FFF8F0;
+    border: 1px solid #E8E4DE;
+    border-radius: 0;
+    text-align: center;
+}
+
+.synergy-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2C2520;
+    margin-bottom: 30px;
+}
+
+.ingredient-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.ingredient-icon-small {
+    font-size: 2rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    cursor: help;
+}
+
+.ingredient-icon-small:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.synergy-subtitle {
+    font-size: 1rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* 하단 각주 */
+.steps-footer-references {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #E8E4DE;
+}
+
+.ref-footnote {
+    font-size: 0.75rem;
+    color: #999;
+    font-style: italic;
+}
+
+/* ----------------------------------------------------------------
    SECTION 4. TECHNOLOGY - Clean & Chic
    ---------------------------------------------------------------- */
 .technology-section-clean {
@@ -2041,12 +2211,30 @@ a {
    RESPONSIVE - Clean & Chic
    ---------------------------------------------------------------- */
 @media (max-width: 768px) {
-    .technology-specs-clean {
+    /* SECTION 3: Solution */
+    .steps-clean-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 40px;
     }
     
-    .certificate-grid-clean {
+    .step-clean-card {
+        padding: 40px 30px;
+    }
+    
+    .solution-title-clean {
+        font-size: 2rem;
+    }
+    
+    .solution-subtitle-clean {
+        font-size: 1rem;
+    }
+    
+    .synergy-ingredients {
+        padding: 40px 20px;
+    }
+    
+    /* SECTION 4: Technology */
+    .technology-specs-clean {
         grid-template-columns: 1fr;
         gap: 20px;
     }
@@ -2057,6 +2245,12 @@ a {
     
     .technology-subtitle-clean {
         font-size: 1.1rem;
+    }
+    
+    /* SECTION 5: Transparency */
+    .certificate-grid-clean {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
     
     .receipt-box-clean {

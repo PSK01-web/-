@@ -4,755 +4,458 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>온애정 추어탕 - 몸의 온기를 채우는 가장 따뜻한 시간</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=Noto+Serif+KR:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles_golden.css">
 </head>
 <body>
-    <!-- 인트로 섹션 -->
+    <!-- Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- SECTION 1. INTRO - The Golden Hour -->
     <section class="intro-section">
-        <div class="intro-overlay"></div>
-        <div class="intro-content">
-            <div class="steam-effect"></div>
-            <h1 class="intro-title fade-in-up">몸의 온기를 채우는<br>가장 따뜻한 시간</h1>
-            <p class="intro-subtitle fade-in-up delay-1">몸이 차가운 당신을 위한,<br>가장 따뜻한 밤의 습관.</p>
-            <h2 class="brand-name fade-in-up delay-2">온애정 추어탕</h2>
-            <div class="scroll-indicator">
-                <div class="mouse"></div>
-                <p>Scroll Down</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 건강 정보 섹션 -->
-    <section class="health-info-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-icon">📖</span>
-                <h2 class="section-title">건강정보</h2>
-            </div>
-
-            <div class="content-block">
-                <h3 class="question-title">왜 '온기 3단계'여야 할까요?</h3>
-                <p class="description">우리 몸의 체온은 단순히 열을 내는 것만으로 유지되지 않습니다.<br>
-                세 가지 메커니즘이 톱니바퀴처럼 함께 작용해야<br>
-                비로소 완벽한 체온 조절 시스템을 이룹니다.</p>
-            </div>
-
-            <!-- 온기 메커니즘 다이어그램 -->
-            <div class="mechanism-diagram">
-                <h4 class="diagram-title">우리 몸의 온기 메커니즘</h4>
-                
-                <!-- 인체 실루엣으로 온기 흐름 시각화 -->
-                <div class="body-warmth-visual">
-                    <svg viewBox="0 0 800 600" class="warmth-svg">
-                        <!-- 인체 실루엣 -->
-                        <path class="body-silhouette" d="M400,50 Q380,40 370,60 L360,100 Q340,120 340,150 L340,250 Q330,270 320,290 L310,400 L300,500 L290,580 L320,580 L330,500 L340,450 L350,400 L360,350 L380,300 L400,280 L420,300 L440,350 L450,400 L460,450 L470,500 L480,580 L510,580 L500,500 L490,400 L480,290 Q470,270 460,250 L460,150 Q460,120 440,100 L430,60 Q420,40 400,50 Z" fill="#E8E8E8" stroke="#999" stroke-width="2"/>
-                        
-                        <!-- STEP 1: 발생 - 중앙에서 시작 -->
-                        <g class="warmth-step step-1">
-                            <circle class="heat-core" cx="400" cy="200" r="0">
-                                <animate attributeName="r" from="0" to="40" dur="2s" begin="0s" fill="freeze"/>
-                                <animate attributeName="opacity" from="0" to="1" dur="1s" begin="0s" fill="freeze"/>
-                            </circle>
-                            <circle class="heat-glow" cx="400" cy="200" r="0">
-                                <animate attributeName="r" from="0" to="60" dur="2s" begin="0s" fill="freeze"/>
-                                <animate attributeName="opacity" from="0" to="0.6" dur="1s" begin="0s" fill="freeze"/>
-                            </circle>
-                        </g>
-                        
-                        <!-- STEP 2: 흐름 - 사방으로 퍼짐 -->
-                        <g class="warmth-step step-2">
-                            <circle class="warmth-wave wave-1" cx="400" cy="200" r="40">
-                                <animate attributeName="r" from="40" to="120" dur="2s" begin="2s" fill="freeze"/>
-                                <animate attributeName="opacity" from="0" to="0.7" dur="0.5s" begin="2s" fill="freeze"/>
-                                <animate attributeName="opacity" from="0.7" to="0.2" dur="1.5s" begin="2.5s" fill="freeze"/>
-                            </circle>
-                            <circle class="warmth-wave wave-2" cx="400" cy="200" r="40">
-                                <animate attributeName="r" from="40" to="140" dur="2.5s" begin="2.3s" fill="freeze"/>
-                                <animate attributeName="opacity" from="0" to="0.5" dur="0.5s" begin="2.3s" fill="freeze"/>
-                                <animate attributeName="opacity" from="0.5" to="0.1" dur="2s" begin="2.8s" fill="freeze"/>
-                            </circle>
-                            <!-- 혈관 따라 흐르는 효과 -->
-                            <path class="flow-path path-left" d="M400,200 Q360,250 350,300" stroke="#FF6F00" stroke-width="3" fill="none" stroke-dasharray="150" stroke-dashoffset="150">
-                                <animate attributeName="stroke-dashoffset" from="150" to="0" dur="2s" begin="2s" fill="freeze"/>
-                            </path>
-                            <path class="flow-path path-right" d="M400,200 Q440,250 450,300" stroke="#FF6F00" stroke-width="3" fill="none" stroke-dasharray="150" stroke-dashoffset="150">
-                                <animate attributeName="stroke-dashoffset" from="150" to="0" dur="2s" begin="2s" fill="freeze"/>
-                            </path>
-                            <path class="flow-path path-down" d="M400,200 L400,350" stroke="#FF6F00" stroke-width="3" fill="none" stroke-dasharray="150" stroke-dashoffset="150">
-                                <animate attributeName="stroke-dashoffset" from="150" to="0" dur="2s" begin="2s" fill="freeze"/>
-                            </path>
-                        </g>
-                        
-                        <!-- STEP 3: 유지 - 전신이 따뜻해짐 -->
-                        <g class="warmth-step step-3">
-                            <path class="body-filled" d="M400,50 Q380,40 370,60 L360,100 Q340,120 340,150 L340,250 Q330,270 320,290 L310,400 L300,500 L290,580 L320,580 L330,500 L340,450 L350,400 L360,350 L380,300 L400,280 L420,300 L440,350 L450,400 L460,450 L470,500 L480,580 L510,580 L500,500 L490,400 L480,290 Q470,270 460,250 L460,150 Q460,120 440,100 L430,60 Q420,40 400,50 Z" fill="url(#warmthGradient)" opacity="0">
-                                <animate attributeName="opacity" from="0" to="0.8" dur="2s" begin="4s" fill="freeze"/>
-                            </path>
-                        </g>
-                        
-                        <!-- 그라데이션 정의 -->
-                        <defs>
-                            <radialGradient id="warmthGradient" cx="50%" cy="30%">
-                                <stop offset="0%" style="stop-color:#FF6F00;stop-opacity:0.9" />
-                                <stop offset="50%" style="stop-color:#FFB74D;stop-opacity:0.6" />
-                                <stop offset="100%" style="stop-color:#FFF3E0;stop-opacity:0.2" />
-                            </radialGradient>
-                        </defs>
-                    </svg>
-                    
-                    <!-- 단계별 설명 -->
-                    <div class="warmth-explanation">
-                        <div class="warmth-step-label step-1-label">
-                            <div class="label-number">1</div>
-                            <div class="label-content">
-                                <h5>🔥 발생</h5>
-                                <p>체내 중심부에서<br>열이 만들어집니다</p>
-                            </div>
-                        </div>
-                        <div class="warmth-step-label step-2-label">
-                            <div class="label-number">2</div>
-                            <div class="label-content">
-                                <h5>🌊 흐름</h5>
-                                <p>혈관을 통해<br>온기가 퍼집니다</p>
-                            </div>
-                        </div>
-                        <div class="warmth-step-label step-3-label">
-                            <div class="label-number">3</div>
-                            <div class="label-content">
-                                <h5>🛡️ 유지</h5>
-                                <p>전신이 따뜻하게<br>온기가 유지됩니다</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 온도 게이지 -->
-                <div class="temperature-gauge">
-                    <div class="gauge-container">
-                        <div class="gauge-bg"></div>
-                        <div class="gauge-fill" data-target="100"></div>
-                        <div class="gauge-markers">
-                            <div class="marker" data-step="1" style="left: 33%">발생</div>
-                            <div class="marker" data-step="2" style="left: 66%">흐름</div>
-                            <div class="marker" data-step="3" style="left: 100%">유지</div>
-                        </div>
-                    </div>
-                    <p class="gauge-label">온기 충전 단계</p>
+        <div class="intro-container">
+            <div class="intro-hero-image">
+                <!-- AI Generated Image: Golden hour light on dining table -->
+                <div class="hero-image-placeholder">
+                    <div class="hero-glow"></div>
+                    <div class="hero-light-effect"></div>
+                    <p class="hero-image-desc">The Golden Hour<br>따뜻한 자연광이 식탁 위로 깊게 들어옵니다</p>
                 </div>
             </div>
-
-            <div class="content-block">
-                <h3 class="emphasis-title">나이가 들수록 내 몸이 차가워지는 진짜 이유</h3>
-                <p class="description">젊을 때는 이 시스템이 잘 돌아가지만,<br>
-                시간의 흐름에 따라 우리 몸의 <strong>'온기 생성 능력'</strong>은<br>
-                자연스럽게 감소합니다.</p>
-            </div>
-
-            <!-- 논문 박스 1 -->
-            <div class="paper-box">
-                <div class="paper-header">
-                    <span class="paper-icon">📄</span>
-                    <h4>과학적 사실</h4>
-                </div>
-                <div class="paper-content">
-                    <blockquote>
-                        "나이가 들수록 기초대사량(RMR)과 식이성 발열 효과(DIT)가 감소하며,
-                        갈색 지방 조직의 기능 저하로 체온 조절 능력이 떨어진다."
-                    </blockquote>
-                    <p class="paper-result">
-                        이러한 생리적 변화는<br>
-                        <strong>"손발 냉증, 온기 유지의 어려움, 전신 에너지 저하"</strong>로 이어진다.
-                    </p>
-                    <div class="paper-references">
-                        <div class="reference-item">
-                            <span class="ref-icon">📚</span>
-                            <div class="ref-text">
-                                <strong>출처 1:</strong> St-Onge & Gallagher (2010)<br>
-                                <em>Nutrition</em> (인용 342회)
-                            </div>
-                        </div>
-                        <div class="reference-item">
-                            <span class="ref-icon">📚</span>
-                            <div class="ref-text">
-                                <strong>출처 2:</strong> Zoico, et al. (2019)<br>
-                                <em>Gerontology</em> (인용 89회)
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 온애정 솔루션 섹션 -->
-    <section class="solution-section">
-        <div class="container">
-            <div class="solution-intro">
-                <h2 class="solution-title">무너진 3단계 밸런스,<br>음식으로 다시 세워야 합니다.</h2>
-                <p class="solution-desc">
-                    온애정은 위 논문에서 밝혀진 온기 메커니즘에 근거하여,<br>
-                    <strong>[발생-흐름-유지]</strong>에 관여하는 핵심 원료를<br>
-                    과학적으로 배합했습니다.
-                </p>
-            </div>
-
-            <!-- STEP 1: 발생 -->
-            <div class="solution-step">
-                <div class="step-header">
-                    <span class="step-emoji">🔥</span>
-                    <h3>STEP 1. [발생 Thermogenesis]<br>대사를 깨우는 힘</h3>
-                </div>
-                <div class="step-content">
-                    <div class="step-text">
-                        <p class="step-description">
-                            <strong>생강, 마늘, 고추:</strong><br>
-                            섭취 시 대사 활동을 자극하여<br>
-                            몸 스스로 열을 내는 <strong>식이성 발열(DIT)</strong>을 돕습니다.
-                        </p>
-                    </div>
-                    
-                    <!-- 생강 논문 박스 -->
-                    <div class="mini-paper-box">
-                        <div class="mini-paper-header">
-                            <span>📚</span>
-                            <h5>생강의 진저롤 - 과학적 근거</h5>
-                        </div>
-                        <blockquote class="mini-quote">
-                            "생강 섭취 후 식후 열 발생(TEF) 43kcal 증가 관찰"
-                        </blockquote>
-                        <p class="mini-reference">
-                            출처: Mansour et al. (2012)<br>
-                            <em>Metabolism</em> (인용 189회)
-                        </p>
-                    </div>
-
-                    <!-- 원료 리스트 -->
-                    <div class="ingredients-list">
-                        <h5>📍 온애정의 원료</h5>
-                        <ul>
-                            <li><span class="ing-icon">🔥</span> <strong>생강</strong> (국산) - 진저롤 성분 함유</li>
-                            <li><span class="ing-icon">🔥</span> <strong>고춧가루</strong> (국산) - 캡사이신 성분 함유</li>
-                            <li><span class="ing-icon">🔥</span> <strong>마늘</strong> (국내산) - 알리신 성분 함유</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- STEP 2: 흐름 -->
-            <div class="solution-step">
-                <div class="step-header">
-                    <span class="step-emoji">🌊</span>
-                    <h3>STEP 2. [흐름 Circulation]<br>온기가 퍼지는 길</h3>
-                </div>
-                <div class="step-content">
-                    <div class="step-text">
-                        <p class="step-description">
-                            <strong>제주 참쑥 & 들기름:</strong><br>
-                            쑥의 따뜻한 성질(시네올)과<br>
-                            들기름의 오메가-3가 뭉친 기운을 풀고,<br>
-                            온기가 전신으로 순환되도록 돕습니다.
-                        </p>
-                    </div>
-                    
-                    <!-- 들기름 논문 박스 -->
-                    <div class="mini-paper-box">
-                        <div class="mini-paper-header">
-                            <span>📚</span>
-                            <h5>들기름 오메가-3 - 과학적 근거</h5>
-                        </div>
-                        <blockquote class="mini-quote">
-                            "들기름 ALA(알파-리놀렌산) 54-64% 함유,<br>
-                            혈관 건강과 밀접한 관련"
-                        </blockquote>
-                        <p class="mini-reference">
-                            출처: Jeong et al. (2011)<br>
-                            <em>Oriental Pharmacy</em> (인용 361회)
-                        </p>
-                    </div>
-
-                    <!-- 원료 리스트 -->
-                    <div class="ingredients-list">
-                        <h5>📍 온애정의 원료</h5>
-                        <ul>
-                            <li><span class="ing-icon">🌿</span> <strong>쑥가루</strong> (제주산) - 시네올 성분 함유</li>
-                            <li><span class="ing-icon">🥄</span> <strong>들기름</strong> (중국산 원료, 국내 가공) - 오메가-3 풍부</li>
-                            <li><span class="ing-icon">🥄</span> <strong>Non-GMO 콩기름</strong> (수입산) - 오메가-6 균형</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- STEP 3: 유지 -->
-            <div class="solution-step">
-                <div class="step-header">
-                    <span class="step-emoji">🛡️</span>
-                    <h3>STEP 3. [유지 Retention]<br>식지 않는 든든함</h3>
-                </div>
-                <div class="step-content">
-                    <div class="step-text">
-                        <p class="step-description">
-                            <strong>남원 미꾸라지 & 사골:</strong><br>
-                            고단백 에너지가 기초 체력을 높여,<br>
-                            만들어진 온기가 쉽게 빠져나가지 않도록<br>
-                            꽉 잡아줍니다.
-                        </p>
-                    </div>
-                    
-                    <!-- 단백질 논문 박스 -->
-                    <div class="mini-paper-box">
-                        <div class="mini-paper-header">
-                            <span>📚</span>
-                            <h5>단백질 DIT - 과학적 근거</h5>
-                        </div>
-                        <blockquote class="mini-quote">
-                            "단백질 DIT 20-30%<br>
-                            (탄수화물 5-10%, 지방 0-3% 대비 4배)"
-                        </blockquote>
-                        <p class="mini-result">
-                            → 소화 과정에서 더 많은 열 발생
-                        </p>
-                        <p class="mini-reference">
-                            출처: Halton & Hu (2004)<br>
-                            <em>Nutrition & Metabolism</em> (인용 823회)
-                        </p>
-                    </div>
-
-                    <!-- 원료 리스트 -->
-                    <div class="ingredients-list">
-                        <h5>📍 온애정의 원료</h5>
-                        <ul>
-                            <li><span class="ing-icon">🐟</span> <strong>미꾸라지</strong> (남원산 양식) - 고단백 10.9%</li>
-                            <li><span class="ing-icon">🍖</span> <strong>사골농축액</strong> (국내산) - 동물성 단백질</li>
-                            <li><span class="ing-icon">🌾</span> <strong>발아현미가루</strong> (국산) - GABA 성분</li>
-                            <li><span class="ing-icon">⚫</span> <strong>검은콩가루</strong> (국산) - 안토시아닌 성분</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 기술력 섹션 -->
-    <section class="technology-section">
-        <div class="container">
-            <div class="tech-intro">
-                <h2 class="tech-title">기술력: 습관을 만드는 흡수율</h2>
-                <h3 class="tech-subtitle">매일 먹어야 체질이 바뀝니다.<br>그래서 '흡수'에 집착했습니다.</h3>
-                <p class="tech-description">
-                    좋은 성분도 몸이 받아들이지 못하면 소용없습니다.<br><br>
-                    온애정은 소화 기능이 약한 분들도 부담 없이 매일 드실 수 있도록<br>
-                    핵심 원료를 <strong>'미세 가루'</strong>로 담았습니다.
-                </p>
-            </div>
-
-            <!-- 흡수율 논문 박스 -->
-            <div class="paper-box absorption-paper">
-                <div class="paper-header">
-                    <span class="paper-icon">📄</span>
-                    <h4>입자 크기와 흡수율의 관계</h4>
-                </div>
-                <div class="paper-content">
-                    <blockquote>
-                        "식품의 입자 크기가 작을수록 (미세 분말화), 소화 효소와 닿는
-                        표면적이 넓어져 생체이용률과 소화 흡수 속도가 증가한다."
-                    </blockquote>
-                    <blockquote>
-                        "특히 현미, 콩과 같은 곡물류는 가루 형태로 섭취 시 세포벽이 파괴되어
-                        영양 성분의 체내 용출량이 극대화된다."
-                    </blockquote>
-                    <div class="paper-references">
-                        <div class="reference-item">
-                            <span class="ref-icon">📚</span>
-                            <div class="ref-text">
-                                <strong>출처 1:</strong> Oghbaei & Prakash (2016)<br>
-                                <em>Effect of primary processing of cereals and legumes on its nutritional quality</em><br>
-                                Cogent Food & Agriculture (인용 403회)
-                            </div>
-                        </div>
-                        <div class="reference-item">
-                            <span class="ref-icon">📚</span>
-                            <div class="ref-text">
-                                <strong>출처 2:</strong> Capuano & Pellegrini (2019)<br>
-                                <em>An integrated look at the effect of structure on nutrient bioavailability</em><br>
-                                J Science of Food and Agriculture (인용 82회)
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 미세 분말화 기술 -->
-            <div class="powder-tech">
-                <div class="powder-badge">
-                    <span class="badge-icon">⚡</span>
-                    <span class="badge-text">[Powder Tech] 미세 분말화 기술</span>
-                </div>
-                <h4 class="powder-title">온애정은 4가지 핵심 원료를 미세 가루로 담았습니다</h4>
-                
-                <div class="powder-grid">
-                    <div class="powder-item">
-                        <span class="powder-icon">✅</span>
-                        <p>쑥가루 (제주산)</p>
-                    </div>
-                    <div class="powder-item">
-                        <span class="powder-icon">✅</span>
-                        <p>검은콩가루 (국산)</p>
-                    </div>
-                    <div class="powder-item">
-                        <span class="powder-icon">✅</span>
-                        <p>발아현미가루 (국산)</p>
-                    </div>
-                    <div class="powder-item">
-                        <span class="powder-icon">✅</span>
-                        <p>들깨가루 (중국산 원료, 국내 가공)</p>
-                    </div>
-                </div>
-
-                <!-- 효과 표시 -->
-                <div class="effect-display">
-                    <h5>[효과]</h5>
-                    <div class="effect-items">
-                        <div class="effect-item down">
-                            <span class="effect-arrow">🔽</span>
-                            <div class="effect-text">
-                                <strong>소화 부담 DOWN</strong>
-                                <p>입자가 고워 위장에서 부드럽게 소화</p>
-                            </div>
-                        </div>
-                        <div class="effect-item up">
-                            <span class="effect-arrow">🔼</span>
-                            <div class="effect-text">
-                                <strong>체내 흡수 UP</strong>
-                                <p>유효 성분이 몸속 깊이 빠르게 전달</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 왜 가루로 만들까요? -->
-                <div class="info-box">
-                    <div class="info-header">
-                        <span class="info-icon">💡</span>
-                        <h5>왜 가루로 만들까요?</h5>
-                    </div>
-                    <div class="info-content">
-                        <p>곡물의 단단한 세포벽은 소화 효소가 침투하기 어렵습니다.</p>
-                        <div class="process-flow">
-                            <span>미세 분말화</span>
-                            <span class="arrow-right">→</span>
-                            <span>세포벽 파괴</span>
-                            <span class="arrow-right">→</span>
-                            <span>표면적 증가</span>
-                            <span class="arrow-right">→</span>
-                            <span>흡수율 향상</span>
-                        </div>
-                        <blockquote class="info-quote">
-                            "Milling process breaks cell wall and improves accessibility of digestion enzymes to components"
-                        </blockquote>
-                        <p class="info-reference">Oghbaei & Prakash (2016)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 신뢰와 투명성 섹션 -->
-    <section class="transparency-section">
-        <div class="container">
-            <div class="transparency-intro">
-                <h2 class="trans-title">신뢰와 투명성</h2>
-                <h3 class="trans-subtitle">비교해 보세요, 압도적인 투명함</h3>
-                <p class="trans-quote">"남들은 소스 뒤에 숨길 때,<br>온애정은 당당하게 밝힙니다."</p>
-                <p class="trans-description">
-                    시중의 많은 제품들이 '복합조미식품'이나 '소스'라는 이름 뒤에 원료를 숨깁니다.<br><br>
-                    하지만 온애정은 내 가족이 먹는 음식이기에,<br>
-                    맛을 내기 위한 아주 작은 재료 하나까지 <strong>100% 투명하게 공개</strong>합니다.
-                </p>
-            </div>
-
-            <!-- 비교 테이블 -->
-            <div class="comparison-table">
-                <div class="comparison-item before">
-                    <div class="comparison-header bad">
-                        <span class="comparison-icon">❌</span>
-                        <h4>자사 개발 이전 시제품 배합 기준</h4>
-                    </div>
-                    <div class="comparison-content">
-                        <p class="ingredient-text">
-                            정제수, 미꾸라지, 시래기, 고추장,<br>
-                            <strong class="highlight-bad">복합조미식품 소스 1</strong>, 된장, 간장...
-                        </p>
-                        <div class="comparison-note">
-                            <p>→ 원료의 정체를 알 수 없는 '소스' 표기</p>
-                            <p>→ 무엇이 들어갔는지 불투명</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="comparison-item after">
-                    <div class="comparison-header good">
-                        <span class="comparison-icon">✅</span>
-                        <h4>온애정 추어탕</h4>
-                    </div>
-                    <div class="comparison-content">
-                        <p class="ingredient-label">원재료명 (함량 순):</p>
-                        <ul class="ingredient-list-detail">
-                            <li>미꾸라지(국산) 10.9%</li>
-                            <li>시래기(국산) 19.39%</li>
-                            <li>된장(국산) 2.42%</li>
-                            <li>들깨(중국산)</li>
-                            <li>개피들깨(중국산)</li>
-                            <li>L-글루탐산나트륨제제 (미원)</li>
-                            <li>고춧가루(국산)</li>
-                            <li>마늘(국산)</li>
-                            <li>들기름(중국산 원료, 국내 가공)</li>
-                            <li>생강(국산)</li>
-                            <li>검은콩가루(국산)</li>
-                            <li>사골농축액(국내산)</li>
-                            <li>Non-GMO 콩기름(외국산)</li>
-                            <li>발아현미가루(국내산)</li>
-                            <li>참기름(외국산)</li>
-                            <li>쑥가루(제주산)</li>
-                            <li>흑후추(외국산)</li>
-                            <li>천일염(국내산)</li>
-                        </ul>
-                        <div class="comparison-note">
-                            <p>→ 복잡한 화학명 없음</p>
-                            <p>→ 숨겨진 '소스' 없음</p>
-                            <p>→ 모든 원료 투명 공개</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 19가지 성분표 -->
-            <div class="ingredient-breakdown">
-                <h3 class="breakdown-title">온애정의 거짓 없는 19가지 성분표</h3>
-
-                <div class="breakdown-category">
-                    <div class="category-header">
-                        <span class="category-number">1️⃣</span>
-                        <h4>힘의 원천 (Main Body)</h4>
-                    </div>
-                    <div class="category-content">
-                        <div class="ingredient-detail">
-                            <p><strong>미꾸라지</strong> (전북 남원산 양식)</p>
-                            <span class="ingredient-desc">→ 추어의 본고장에서 자란 힘찬 에너지</span>
-                        </div>
-                        <div class="ingredient-detail">
-                            <p><strong>무청시래기 & 사골농축액</strong> (국내산)</p>
-                            <span class="ingredient-desc">→ 깊고 진한 맛의 베이스</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="breakdown-category">
-                    <div class="category-header">
-                        <span class="category-number">2️⃣</span>
-                        <h4>온기 파우더 (Absorb Powder)</h4>
-                    </div>
-                    <div class="category-content">
-                        <p class="category-subtitle">미세 분말화 4종</p>
-                        <ul class="powder-list">
-                            <li>쑥가루 (제주산)</li>
-                            <li>검은콩가루 (국산)</li>
-                            <li>발아현미가루 (국산)</li>
-                            <li>들깨가루 (중국산 원료, 국내 가공)</li>
-                        </ul>
-                        <span class="ingredient-desc">→ 흡수율을 높인 자연의 원료</span>
-                    </div>
-                </div>
-
-                <div class="breakdown-category">
-                    <div class="category-header">
-                        <span class="category-number">3️⃣</span>
-                        <h4>맛의 밸런스 (Flavor Balance)</h4>
-                    </div>
-                    <div class="category-content">
-                        <div class="flavor-group">
-                            <p class="flavor-label">자연 양념 (모두 국내산):</p>
-                            <p class="flavor-items">마늘, 생강, 된장, 고춧가루, 천일염</p>
-                        </div>
-                        <div class="flavor-group">
-                            <p class="flavor-label">풍미:</p>
-                            <p class="flavor-items">
-                                들기름 (중국산 원료)<br>
-                                참기름 (외국산)<br>
-                                흑후추 (외국산)
-                            </p>
-                        </div>
-                        <div class="flavor-group">
-                            <p class="flavor-label">감칠맛:</p>
-                            <p class="flavor-items">L-글루탐산나트륨 (미원)</p>
-                            <span class="flavor-note">
-                                입맛을 돋우기 위한 최소한의 선택까지 솔직하게 표기했습니다.
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 마무리 메시지 -->
-            <div class="transparency-message">
-                <p class="message-quote">💬 "읽을 수 없는 복잡한 화학명은 없습니다."</p>
-                <p class="message-text">이것이 온애정이 고객을 대하는 투명한 방식입니다.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 아웃트로 / CTA 섹션 -->
-    <section class="outro-section">
-        <div class="outro-overlay"></div>
-        <div class="container">
-            <div class="outro-content">
-                <h2 class="outro-title">몸이 차가운 당신을 위한,<br>가장 따뜻한 밤의 습관.</h2>
-                <p class="outro-subtitle">오늘 밤부터,<br>온애정으로 내 몸에 온기를 저축하세요.</p>
-                
-                <div class="habit-box">
-                    <span class="habit-icon">🔥</span>
-                    <h3>온기는 습관입니다</h3>
-                    <p>한 그릇으로 시작하세요.<br>그리고 내일도, 모레도 계속하세요.</p>
-                    <p class="habit-emphasis">일시적인 따뜻함이 아닌,<br>지속되는 온기를 위해.</p>
-                    <p class="habit-brand">온애정과 함께하는 따뜻한 밤의 습관.</p>
-                </div>
-
-                <button class="cta-button">온애정 시작하기</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- 부록: 참고 논문 섹션 -->
-    <section class="references-section">
-        <div class="container">
-            <h2 class="references-title">📚 부록: 참고 논문 전체 리스트</h2>
             
-            <div class="reference-category">
-                <h3>🏥 건강정보 - 노화와 대사</h3>
-                <ul class="reference-list">
-                    <li>
-                        <strong>St-Onge, M.P. & Gallagher, D. (2010)</strong><br>
-                        Body composition changes with aging<br>
-                        <em>Nutrition</em> (인용 342회)
-                    </li>
-                    <li>
-                        <strong>Zoico, E., et al. (2019)</strong><br>
-                        Brown adipose tissue and ageing<br>
-                        <em>Gerontology</em> (인용 89회)
-                    </li>
-                </ul>
-            </div>
-
-            <div class="reference-category">
-                <h3>🔥 온기 메커니즘 - 발생</h3>
-                <ul class="reference-list">
-                    <li>
-                        <strong>Mansour, M.S., et al. (2012)</strong><br>
-                        Ginger consumption enhances the thermic effect of food<br>
-                        <em>Metabolism</em> (인용 189회)
-                    </li>
-                    <li>
-                        <strong>Janssens, P.L., et al. (2011)</strong><br>
-                        Capsaicin increases sensation of fullness<br>
-                        <em>Physiology & Behavior</em> (인용 198회)
-                    </li>
-                    <li>
-                        <strong>Srinivasan, K. (2007)</strong><br>
-                        Black pepper and its pungent principle-piperine<br>
-                        <em>Critical Reviews in Food Science</em> (인용 1,168회)
-                    </li>
-                </ul>
-            </div>
-
-            <div class="reference-category">
-                <h3>🌊 온기 메커니즘 - 흐름</h3>
-                <ul class="reference-list">
-                    <li>
-                        <strong>Jeong, S.M., et al. (2011)</strong><br>
-                        Quality characteristics of perilla seed oils<br>
-                        <em>Archives of Pharmacal Research</em> (인용 361회)
-                    </li>
-                    <li>
-                        <strong>Simopoulos, A.P. (2002)</strong><br>
-                        The importance of the omega-6/omega-3 ratio<br>
-                        <em>Biomedicine & Pharmacotherapy</em> (인용 3,891회)
-                    </li>
-                </ul>
-            </div>
-
-            <div class="reference-category">
-                <h3>🛡️ 온기 메커니즘 - 유지</h3>
-                <ul class="reference-list">
-                    <li>
-                        <strong>Halton, T.L. & Hu, F.B. (2004)</strong><br>
-                        The effects of high protein diets<br>
-                        <em>Nutrition & Metabolism</em> (인용 823회)
-                    </li>
-                    <li>
-                        <strong>Xu, J.G., et al. (2016)</strong><br>
-                        GABA content and γ-glutamyl transpeptidase activity<br>
-                        <em>European Food Research and Technology</em> (인용 117회)
-                    </li>
-                </ul>
-            </div>
-
-            <div class="reference-category">
-                <h3>🔬 흡수율 기술 - 미세 분말화</h3>
-                <ul class="reference-list">
-                    <li>
-                        <strong>Oghbaei, M. & Prakash, J. (2016)</strong><br>
-                        Effect of primary processing of cereals and legumes on its nutritional quality: A comprehensive review<br>
-                        <em>Cogent Food & Agriculture</em> (인용 403회)
-                    </li>
-                    <li>
-                        <strong>Capuano, E. & Pellegrini, N. (2019)</strong><br>
-                        An integrated look at the effect of structure on nutrient bioavailability in plant foods<br>
-                        <em>Journal of the Science of Food and Agriculture</em> (인용 82회)
-                    </li>
-                    <li>
-                        <strong>Sandberg, A.S. (2002)</strong><br>
-                        Bioavailability of minerals in legumes<br>
-                        <em>British Journal of Nutrition</em> (인용 677회)
-                    </li>
-                </ul>
-            </div>
-
-            <div class="reference-summary">
-                <p><strong>총 12편 논문 인용</strong></p>
-                <p><strong>총 인용 횟수: 9,068회</strong></p>
+            <div class="intro-content">
+                <h1 class="intro-title">
+                    <span class="intro-title-main">몸의 온기를 채우는</span>
+                    <span class="intro-title-sub">가장 따뜻한 시간</span>
+                </h1>
+                
+                <p class="intro-copy">
+                    행복한 순간을 꿈꾸는 당신을 위해,<br>
+                    가장 엄격한 기준으로 완성한 따뜻한 밤의 습관.
+                </p>
+                
+                <p class="intro-brand">온애정(溫愛精) 추어탕</p>
+                
+                <div class="intro-feature-cards">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔥</div>
+                        <h3>3단계 온기</h3>
+                        <p>점화 · 순환 · 유지</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✅</div>
+                        <h3>투세이프 인증</h3>
+                        <p>임산부도 안심</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌿</div>
+                        <h3>18가지 원물</h3>
+                        <p>정직한 감칠맛</p>
+                    </div>
+                </div>
+                
+                <a href="#solution" class="intro-cta">따뜻한 기적 시작하기</a>
             </div>
         </div>
     </section>
 
-    <!-- 법적 고지사항 -->
-    <section class="legal-section">
-        <div class="container">
-            <div class="legal-notice">
-                <div class="legal-header">
-                    <span class="legal-icon">⚠️</span>
-                    <h3>중요 안내</h3>
+    <!-- SECTION 2. PROBLEM - 공감과 문제 제기 -->
+    <section class="problem-section">
+        <div class="problem-container">
+            <div class="problem-visual">
+                <!-- AI Generated Image: Cold hands, socks, temperature graph -->
+                <div class="problem-image-placeholder">
+                    <div class="coldness-visual"></div>
+                    <p class="problem-image-desc">차가운 손발, 우하향하는 체온 그래프</p>
                 </div>
-                <div class="legal-content">
-                    <p><strong>본 제품은 질병의 예방 및 치료를 위한 의약품이 아닙니다.</strong></p>
-                    <p>본 페이지의 내용은:</p>
-                    <ul>
-                        <li>• 노화와 대사에 관한 일반적 건강 정보</li>
-                        <li>• 원료의 영양학적 특성</li>
-                        <li>• 공개된 학술 논문 인용</li>
-                    </ul>
-                    <p>제품의 효능·효과를 보증하지 않으며,<br>
-                    꾸준한 섭취와 건강한 생활 습관이 함께해야 합니다.</p>
+            </div>
+            
+            <div class="problem-content">
+                <h2 class="problem-title">
+                    "좋은 소식은,<br>
+                    따뜻한 곳에 가장 먼저 찾아옵니다."
+                </h2>
+                
+                <p class="problem-intro">
+                    단순히 날씨 탓이 아닙니다.<br>
+                    시간이 흐를수록 우리 몸의 <strong>'온기 방어선'</strong>이 무너지기 때문입니다.
+                </p>
+                
+                <div class="problem-list">
+                    <div class="problem-item">
+                        <div class="problem-icon">🔻</div>
+                        <div class="problem-text">
+                            <h4>발생(Generation) 부족</h4>
+                            <p>나이가 들수록 세포가 스스로 열을 내는 힘(기초대사)이 떨어집니다.</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-icon">⛔</div>
+                        <div class="problem-text">
+                            <h4>흐름(Circulation) 정체</h4>
+                            <p>길이 좁아져 따뜻한 기운이 손발 끝까지 닿지 못합니다.</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-icon">❄️</div>
+                        <div class="problem-text">
+                            <h4>유지(Retention) 저하</h4>
+                            <p>채워진 온기를 붙잡지 못하고 쉽게 식어버립니다.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="problem-conclusion">
+                    무너진 3단계 밸런스,<br>
+                    제대로 된 <strong>'음식'</strong>으로 다시 세워야 합니다.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3. SOLUTION - Core Warming System™ -->
+    <section id="solution" class="solution-section-anchor">
+        <div class="solution-container-anchor">
+            <div class="solution-header-anchor">
+                <h2 class="solution-title-anchor">온애정 Core Warming System™</h2>
+                <p class="solution-subtitle-anchor">
+                    자연에서 찾은 18가지 재료가<br>
+                    <strong>[깨우고 - 돌리고 - 가둡니다]</strong>
+                </p>
+            </div>
+            
+            <!-- AI Generated: 3-step mechanism illustration -->
+            <div class="mechanism-visual">
+                <div class="mechanism-placeholder">
+                    <p>3단계 톱니바퀴 일러스트</p>
+                </div>
+            </div>
+            
+            <!-- 3 Steps -->
+            <div class="steps-anchor-grid">
+                <!-- STEP 1: Ignition -->
+                <div class="step-anchor-card">
+                    <div class="step-badge">STEP 1</div>
+                    <h3 class="step-title-main">점화 Ignition</h3>
+                    <h4 class="step-title-sub">대사를 깨우는 자연의 불씨</h4>
+                    
+                    <div class="step-ingredients">
+                        <h5>Key Ingredients</h5>
+                        <p>제주 HACCP 참쑥(시네올), 마늘, 생강, 고추</p>
+                    </div>
+                    
+                    <div class="step-logic">
+                        <p>
+                            청정 제주의 해풍을 맞고 자란 쑥의 <strong>'시네올'</strong> 성분과 
+                            따뜻한 성질의 향신료가 차갑게 굳은 몸을 깨워 
+                            온기 맞을 준비를 합니다.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- STEP 2: Circulation -->
+                <div class="step-anchor-card">
+                    <div class="step-badge">STEP 2</div>
+                    <h3 class="step-title-main">순환 Circulation</h3>
+                    <h4 class="step-title-sub">온기가 퍼지는 황금빛 길</h4>
+                    
+                    <div class="step-ingredients">
+                        <h5>Key Ingredients</h5>
+                        <p>저온압착 생들기름(오메가-3), 통들깨, 참기름</p>
+                    </div>
+                    
+                    <div class="step-logic">
+                        <p>
+                            식물성 오메가-3가 풍부한 들기름이 닫힌 길을 엽니다. 
+                            1단계에서 만들어진 온기가 막힘없이 전신으로 
+                            흐르도록 돕습니다.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- STEP 3: Retention -->
+                <div class="step-anchor-card">
+                    <div class="step-badge">STEP 3</div>
+                    <h3 class="step-title-main">유지 Retention</h3>
+                    <h4 class="step-title-sub">식지 않는 든든한 연료</h4>
+                    
+                    <div class="step-ingredients">
+                        <h5>Key Ingredients</h5>
+                        <p>통째로 갈아 넣은 미꾸라지(고단백), 발아현미 & 검은콩 가루</p>
+                    </div>
+                    
+                    <div class="step-logic">
+                        <p>
+                            단백질은 섭취 시 몸에서 열을 가장 많이 내는 영양소입니다(식이성 발열 효과). 
+                            미꾸라지의 고단백 에너지와 소화 흡수가 잘되는 발아 곡물 가루가 
+                            밤새 식지 않는 든든함을 지켜줍니다.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 푸터 -->
+    <!-- SECTION 4. SAFETY - 투세이프 인증 (Anchor & Expand) -->
+    <section class="safety-section-anchor">
+        <div class="safety-container-anchor">
+            <div class="safety-header-anchor">
+                <h2 class="safety-title-anchor">
+                    "엄마가 될 준비,<br>
+                    그 간절함을 알기에<br>
+                    타협할 수 없었습니다."
+                </h2>
+            </div>
+            
+            <!-- Two-Safe Badge (Large) -->
+            <div class="twosafe-badge-large">
+                <div class="badge-icon-large">✓✓</div>
+                <h3>투세이프(Two Safe) 인증</h3>
+                <p>국내 유일 임산부 안전 검증 시스템</p>
+            </div>
+            
+            <div class="safety-content-anchor">
+                <p class="safety-intro">
+                    온애정은 단순한 HACCP을 넘어,<br>
+                    <strong>1차 성분 분석부터 2차 전문가 평가까지.</strong><br>
+                    태아에게 전해져도 안전한지 확인했습니다.
+                </p>
+                
+                <div class="safety-checks">
+                    <div class="check-item">
+                        <div class="check-icon">✔</div>
+                        <p>중금속, 환경호르몬 걱정 NO</p>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-icon">✔</div>
+                        <p>18가지 전성분 생식 독성 안전성 검증 완료</p>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-icon">✔</div>
+                        <p>방사능 검사 통과</p>
+                    </div>
+                </div>
+                
+                <div class="safety-expand-message">
+                    <p class="expand-copy">
+                        "<strong>예비맘도 안심하고 먹는 추어탕</strong>이라면,<br>
+                        우리 가족 누구에게나 가장 안전한 보양식입니다."
+                    </p>
+                    <p class="expand-note">
+                        * 베이비 로션을 성인 여성이 순해서 쓰는 것처럼, 
+                        가장 까다로운 기준을 통과했기에 누구에게나 완벽합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5. TRANSPARENCY - 클린 라벨 -->
+    <section class="transparency-section-anchor">
+        <div class="transparency-container-anchor">
+            <div class="transparency-header-anchor">
+                <h2 class="transparency-title-anchor">
+                    남들은 소스 뒤에 숨길 때,<br>
+                    온애정은 당당하게 밝힙니다.
+                </h2>
+            </div>
+            
+            <!-- Visual Comparison -->
+            <div class="comparison-visual">
+                <div class="comparison-before">
+                    <h3>시중 추어탕</h3>
+                    <div class="ingredient-hidden">
+                        <p>복합조미식품</p>
+                        <p>추어탕용소스</p>
+                        <p>혼합양념</p>
+                        <p class="question">그 안에 무엇이?</p>
+                    </div>
+                </div>
+                <div class="comparison-after">
+                    <h3>온애정 추어탕</h3>
+                    <div class="ingredient-revealed">
+                        <p>✓ 미꾸라지 (국내산)</p>
+                        <p>✓ 쑥가루 (제주)</p>
+                        <p>✓ 저온압착 들기름</p>
+                        <p class="answer">18가지 원물 공개</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="transparency-content">
+                <h3 class="ingredients-title">온애정의 거짓 없는 18가지 전성분</h3>
+                <p class="ingredients-intro">
+                    우리는 복잡한 소스 대신 <strong>원물(Real Food)</strong>로 맛을 냅니다.
+                </p>
+                
+                <div class="ingredients-grid-anchor">
+                    <div class="ingredient-category">
+                        <h4>💪 힘의 원천</h4>
+                        <ul>
+                            <li>미꾸라지(국내산)</li>
+                            <li>사골농축액</li>
+                            <li>시래기(국내산)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ingredient-category">
+                        <h4>🔥 온기 재료</h4>
+                        <ul>
+                            <li>쑥가루(제주)</li>
+                            <li>들깨</li>
+                            <li>개피들깨</li>
+                            <li>저온압착들기름</li>
+                            <li>참기름</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ingredient-category">
+                        <h4>🌿 자연 양념</h4>
+                        <ul>
+                            <li>된장</li>
+                            <li>고춧가루</li>
+                            <li>마늘</li>
+                            <li>생강</li>
+                            <li>흑후추</li>
+                            <li>유기농콩기름</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ingredient-category">
+                        <h4>🌾 영양 곡물</h4>
+                        <ul>
+                            <li>검은콩가루(서리태)</li>
+                            <li>발아현미가루</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- MSG 투명 공개 -->
+                <div class="msg-transparency">
+                    <h4>감칠맛의 진실: L-글루탐산나트륨(미원)</h4>
+                    <p class="msg-note">
+                        알 수 없는 복합 소스 대신, 사탕수수를 발효한 미원을 아주 조금 넣었습니다. 
+                        맛을 위한 최소한의, 그리고 <strong>가장 투명한 선택</strong>입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6. NUTRITION & TASTE - 영양 스펙 & 맛 -->
+    <section class="nutrition-section-anchor">
+        <div class="nutrition-container-anchor">
+            <div class="nutrition-header">
+                <h2 class="nutrition-title">영양은 무겁게, 목 넘김은 부드럽게.</h2>
+            </div>
+            
+            <!-- Visual: Creamy texture close-up -->
+            <div class="texture-visual">
+                <div class="texture-placeholder">
+                    <p>미꾸라지가 통째로 들어갔지만 곱게 갈려 크리미해진 국물 텍스처</p>
+                </div>
+            </div>
+            
+            <div class="nutrition-specs">
+                <h3>압도적인 영양 성적표</h3>
+                
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <div class="spec-icon">🥣</div>
+                        <h4>고단백</h4>
+                        <p>미꾸라지를 통째로 삶아 갈아 넣어 단백질을 꽉 채웠습니다.</p>
+                    </div>
+                    
+                    <div class="spec-card">
+                        <div class="spec-icon">🌿</div>
+                        <h4>고엽산 & 고오메가</h4>
+                        <p>임신 준비 필수 영양소, 영양제 말고 음식으로 섭취하세요.</p>
+                    </div>
+                    
+                    <div class="spec-card">
+                        <div class="spec-icon">🦴</div>
+                        <h4>고칼슘 & 고인</h4>
+                        <p>뼈 건강까지 생각한 설계.</p>
+                    </div>
+                    
+                    <div class="spec-card">
+                        <div class="spec-icon">❌</div>
+                        <h4>무당 & 무트랜스지방</h4>
+                        <p>혈당 걱정 없이 즐기는 건강한 한 끼.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="taste-section">
+                <h3>"추어탕, 비릴까 봐 걱정되시나요?"</h3>
+                <p class="taste-answer">
+                    걱정 마세요. 미꾸라지는 뼈째 푹 삶아 부드럽게 갈았고, 
+                    들깨, 검은콩, 발아현미의 고소함이 비린 맛을 완벽하게 잡았습니다. 
+                    마치 진한 <strong>'보양 스프'</strong>를 먹는 듯한 부드러움을 경험해 보세요.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7. OUTRO - 아웃트로 -->
+    <section class="outro-section-anchor">
+        <div class="outro-container-anchor">
+            <!-- Visual: Peaceful night scene -->
+            <div class="outro-visual">
+                <div class="outro-image-placeholder">
+                    <p>밤, 침대 옆 협탁에 놓인 온애정 패키지와 따뜻한 조명</p>
+                </div>
+            </div>
+            
+            <div class="outro-content-anchor">
+                <div class="brand-meaning">
+                    <div class="meaning-item">
+                        <h3>溫 (온)</h3>
+                        <p>따뜻한 온기로 몸을 채우고</p>
+                    </div>
+                    <div class="meaning-item">
+                        <h3>愛 (애)</h3>
+                        <p>간절한 사랑으로 마음을 다독이며</p>
+                    </div>
+                    <div class="meaning-item">
+                        <h3>精 (정)</h3>
+                        <p>지극한 정성으로 만든 한 그릇</p>
+                    </div>
+                </div>
+                
+                <h2 class="outro-title">
+                    "행복한 순간을 꿈꾸는 당신에게,<br>
+                    따뜻한 사랑이 함께하기를."
+                </h2>
+                
+                <p class="outro-copy">
+                    오늘 밤부터, 온애정으로 내 몸에 온기를 저축하세요.<br>
+                    가장 따뜻한 응원, <strong>온애정 추어탕.</strong>
+                </p>
+                
+                <a href="#" class="outro-cta">따뜻한 기적 시작하기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 온애정 추어탕. All rights reserved.</p>
+        <div class="footer-container">
+            <div class="footer-legal">
+                <p class="footer-disclaimer">
+                    본 제품은 질병의 예방 및 치료를 위한 의약품이 아니며, 
+                    개인에 따라 효과가 다를 수 있습니다. 
+                    균형 잡힌 식사와 건강한 생활습관을 병행하시기 바랍니다.
+                </p>
+                <p class="footer-copyright">
+                    &copy; 2024 온애정 추어탕. All rights reserved.
+                </p>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script_golden.js"></script>
 </body>
 </html>
